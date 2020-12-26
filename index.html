@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            #StylyStyles{
+                color: antiquewhite;
+                border: cadetblue;
+                border-top-style: groove;
+                border-left-style: ridge;
+                border-right-style: double;
+                border-bottom-style: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id = "StylyStyles">My Family Booklet</h1>
+        
+        <img src = "https://cdn1.byjus.com/wp-content/uploads/2019/09/my-family-essay-for-class-1.jpeg">
+        <br>
+        <img id = "Img_Member" src = "" width = "300px">
+        <h3 id = "Name_Member"></h3>
+        <!--<img id = "Img_Member" src = "">-->
+        <button id = "But1"  onClick = "F1()">Next Person</button>
+        <script>
+            var Names = ["Sundar","Mahalakshmi","Sai Arun"];
+            var Imgs = ["Sundar.jpeg","Mahalakshmi.jpeg","Sai.jpeg"];
+            var Numerical_Notice = -1;
+            function F1() {
+                if(Numerical_Notice == 2 ){
+                    Numerical_Notice = 0;
+                }
+                else {
+                    Numerical_Notice+= 1;
+                }
+                document.getElementById("Name_Member").innerHTML = Names[Numerical_Notice];
+                document.getElementById("Img_Member").src = Imgs[Numerical_Notice];
+            }           
+        </script>
+    </body>
+</html>
